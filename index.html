@@ -29,14 +29,17 @@
             color: #333;
             font-weight: bold;
         }
-        /* Hover effect to display sections */
-        #about, #contact {
+
+        /* Hover effect to show additional section */
+        .hidden-section {
             display: none;
+            padding: 2em 0;
+            text-align: center;
         }
-        nav ul li a:hover ~ .about, 
-        nav ul li a:hover ~ .contact {
+        nav ul li a:hover + .hidden-section {
             display: block;
         }
+
         .hero {
             background: url('path-to-your-hero-image.jpg') no-repeat center center/cover;
             color: white;
@@ -55,14 +58,6 @@
             margin: auto;
             overflow: hidden;
         }
-        .about, .contact {
-            padding: 2em 0;
-            text-align: center;
-        }
-        .about h2, .contact h2 {
-            font-size: 2em;
-            color: #f7c0c0;
-        }
         footer {
             background-color: #333;
             color: white;
@@ -77,8 +72,6 @@
             <ul style="float: left;">
                 <li><a href="#home">Home</a></li>
                 <li><a href="drinks.html">Drinks in Stock</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
             </ul>
             <ul style="float: right;">
                 <li><a href="login.html">Log In</a></li>
@@ -93,20 +86,12 @@
             <p>The ultimate energy boost for any adventure!</p>
         </div>
     </section>
-    
-    <section class="about" id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Here at PinkDrink, Our beverages are designed to give you the energy you need to tackle any challenge, whether you're needing the energy you lack, Or need a tastful beverage to lighten your day!</p>
-        </div>
-    </section>
-    
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Have questions or feedback? We'd love to hear from you! Reach out to us via email at <a href="mailto:info@pinkdrink.com">info@pinkdrink.com</a> or follow us on social media.</p>
-        </div>
-    </section>
+
+    <!-- Hidden section revealed on hover over Home -->
+    <div class="hidden-section">
+        <h2>Our Featured Drinks</h2>
+        <p>Discover our latest energizing drinks designed to keep you going strong all day!</p>
+    </div>
     
     <footer>
         <p>&copy; 2021 PinkDrink. All rights reserved.</p>
